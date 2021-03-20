@@ -21,6 +21,22 @@ class User < ApplicationRecord
   has_many :inverted_friendrequests, -> { where status: false }, class_name: 'Friendrequest'
   has_many :friend_requests, through: :inverted_friendrequests, source: :user
 
+  def friends
+    friends_array = friendrequests.map { |friendrequest| friendrequest.friend if friendrequest.status } +
+                    inverse_friendrequests.map { |friendrequest| friendrequest.user if friendrequest.status }
+    friends_array.compact
+  end
+
+  def pending_friends
+    friendrequests.map { |friendrequest| friendrequest.friend if !friendrequest.status || friendrequest.nil? }.compact
+  end
+
+  def friend_requests
+    inverse_friendrequests.map do |friendrequest|
+      friendrequest.user if !friendrequest.status || friendrequest.nil?
+    end.compact
+  end
+
   def confirm_friend(user)
     friend = Friendrequest.find_by(user_id: user_id, friend_id: id)
     friend.status = true
