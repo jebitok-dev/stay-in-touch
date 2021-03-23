@@ -44,8 +44,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 
-gem 'rails_helper'
-
 group :test do
   gem 'shoulda-matchers', require: false
 end
