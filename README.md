@@ -4,11 +4,6 @@
 
 > This project puts your knowledge of Advanced Topics of Ruby on Rails, among other rail skills to the tests. The aim of the project is to build a Social Media Web-App called "Stay in Touch" that allows users create account, see the timeline, send, recieve or reject friend requests, create posts and comments, like & dislike and be able profiles theirs and those of other users while logged-in.
 
-## Built With
-
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
-
 ## Live Demo
 
 [Stay-in-Touch](https://agile-ocean-12616.herokuapp.com/users/sign_in)
@@ -22,13 +17,14 @@ To get a local copy up and running follow these simple example steps.
 Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
+heroku
 
 ### Setup
 
 Clone repository
 
 ```
-$ git clone `$ git clone https://github.com/jebitok-dev/private-events`
+$ git clone `$ git clone https://github.com/jebitok-dev/stay-in-touch`
 ```
 
 Instal gems with:
@@ -58,11 +54,10 @@ Open `http://localhost:3000/` in your browser.
 
 ```
     rpsec --format documentation
+    rspec spec/models/comment_spec.rb
+    rspec spec/models/post_spec.rb
+    rspec spec/models/user_spec.rb
 ```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
 
 ## Author
 
@@ -85,13 +80,13 @@ To get a local copy up and running follow these simple example steps.
 
 ````
 - Fork the repository
-- git clone https://github.com/your_username/ror-social-scaffold
+- git clone https://github.com/your_username/stay-in-touch
 - git checkout develop
 - git checkout -b branch name
 - run ```$ bundle install```
 - $ rails db:create
 - $ rails db:migrate
-- git remote add upstream https://github.com/jebitok-dev/private-events
+- git remote add upstream https://github.com/jebitok-dev/stay-in-touch
 - git pull upstream develop
 - git commit -m "commit message"
 - git push -u origin HEAD
