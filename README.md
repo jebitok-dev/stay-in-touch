@@ -71,7 +71,7 @@ Open `http://localhost:3000/` in your browser.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jebitok-dev/ror-social-scaffold/issues/).
+Feel free to check the [issues page](https://github.com/jebitok-dev/stay-in-touch/issues/).
 issues).
 
 ### How to Contribute
