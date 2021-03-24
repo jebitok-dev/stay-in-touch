@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-TBA
+[Stay-in-Touch](https://agile-ocean-12616.herokuapp.com/users/sign_in)
 
 ## Getting Started
 
